@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tobi.billingapp2.Activities.MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Hallo Patrick. Hier dein Menü:  \n"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="13dp"
+        android:background="@android:drawable/ic_menu_search"
+        android:onClick="openExplorer"
+        android:text="Search Files" />
+
+    <Button
+        android:id="@+id/products"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_alignTop="@+id/button"
+        android:layout_toEndOf="@+id/button"
+        android:layout_toRightOf="@+id/button"
+        android:background="@drawable/gemuese2"
+        android:onClick="productsClicked"
+        android:text="Products" />
+
+    <Button
+        android:id="@+id/summary"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_alignBottom="@+id/products"
+        android:layout_toEndOf="@+id/products"
+        android:layout_toRightOf="@+id/products"
+        android:background="@android:drawable/ic_dialog_info"
+        android:text="Summary" />
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_alignBottom="@+id/summary"
+        android:layout_toEndOf="@+id/summary"
+        android:layout_toRightOf="@+id/summary"
+        android:background="@android:drawable/ic_delete"
+        android:onClick="deleteFiles"
+        android:text="Delete" />
+
+    <Button
+        android:id="@+id/deleteRedundant"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_below="@+id/products"
+        android:background="@android:drawable/ic_menu_delete"
+        android:onClick="deleteRedundantFiles"
+        android:text="Delete" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitEnd"
+        app:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/summaryButton"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/button"
+        android:layout_toLeftOf="@+id/deleteRedundant"
+        android:layout_toStartOf="@+id/deleteRedundant"
+        android:background="@android:drawable/ic_menu_month"
+        android:gravity="center"
+        android:onClick="createSummaryClicked"
+        android:text="Create Summary" />
+
+</android.widget.RelativeLayout>

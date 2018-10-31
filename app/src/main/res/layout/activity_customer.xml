@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tobi.billingapp2.Activities.CSV_Content">
+
+    <HorizontalScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="wrap_content"
+        android:layout_height="360dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:fillViewport="true">
+
+        <ScrollView
+            android:id="@+id/ScrollView02"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TableLayout
+                android:id="@+id/TableLayout02"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:divider="?android:dividerHorizontal"
+                android:showDividers="middle"
+                android:stretchColumns="0">
+
+            </TableLayout>
+
+        </ScrollView>
+
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/printButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_above="@+id/buttonReturn"
+        android:background="@android:color/background_light"
+        android:layout_alignParentLeft="true"
+        android:onClick="printFile"
+        android:text="Print Bill" />
+
+    <Button
+        android:id="@+id/buttonReturn"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/colorPrimary"
+        android:onClick="returnToHome"
+        android:text="Save and Return to Overview of All Customers" />
+
+    <TextView
+        android:id="@+id/totalPrice"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_alignBottom="@+id/ScrollView01"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-18dp"
+        android:text="TextView" />
+
+
+</android.widget.RelativeLayout>
